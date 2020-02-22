@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(229, 229, 229);
+}
+
+#wheel-left,
+#wheel-right {
+  animation: wheel 1.5s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#man-bike {
+  animation: man-bike 0.5s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+#cap {
+  animation: cap 0.5s ease-in-out infinite alternate;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes man-bike {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(12deg);
+  }
+}
+@keyframes cap {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
